@@ -49,7 +49,7 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 
  Rozwiązanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2,q_3,q_4,q_5,q_6,q_7\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_7\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_7\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_7\}).\]
 
 \vspace{20pt}
 
@@ -180,6 +180,34 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_6\},\{a,b\},\{a,b,X,Y,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_6\}).\]
 
+\vspace{20pt}
+
+\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[above right of=q0,yshift=-1.5cm]{$q_1$};
+\node[state](q2)[below right of=q0,yshift=1.5cm]{$q_2$};
+\node[state](q3)[right of=q0,xshift=1.75cm]{$q_3$};
+\node[state](q4)[below of=q3,yshift=-2cm]{$q_4$};
+\node[state](q5)[below of=q4]{$q_5$};
+\node[state,accepting](q6)[left of=q5]{$q_6$};
+
+\path(q0)edge[above right]node[above left,xshift=0.4cm]{$a/X\rightarrow$}(q1)
+edge[below right]node[below left,xshift=0.4cm]{$b/Y\rightarrow$}		(q2)
+(q2)edge[above right]node[below right,yshift=-0.1cm,xshift=-0.4cm]{$a/X\leftarrow$}(q3)
+edge[loop below]node[text 						width=1cm,align=center]{$b/b\rightarrow$\\$X/X\rightarrow$\\$Y/Y\rightarrow$}()
+(q1)edge[below right]node[above right,xshift=-0.1cm]{$b/Y\leftarrow$}(q3)
+edge[loop above]node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$X/X\rightarrow$\\$Y/Y\rightarrow$}()
+(q3)edge[loop right]node[text 						width=1cm,align=center]{$a/a\leftarrow$\\$b/b\leftarrow$\\$X/X\leftarrow$\\$Y/Y\leftarrow$}()
+(q3)edge node{$0/0\rightarrow$}(q4)
+(q4)edge[loop right]node[text 						width=1cm,align=center]{$X/X\rightarrow$\\$Y/Y\rightarrow$}()
+edge[bend left=2cm]node[text 						width=1cm,align=center]{$a/a-$\\$b/b-$}(q0)
+edge node{$\bigtriangledown/\bigtriangledown\leftarrow$}(q5)
+(q5)edge[loop right]node[text 						width=1cm,align=center]{$X/a\leftarrow$\\$Y/b\leftarrow$}()
+edge node[below]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q6);
+
+\end{tikzpicture}
+
 \newpage
 
 \noindent\textbf{Zad 1.23.} Zaprojektuj maszynę Turinga, która akceptuje język
@@ -189,6 +217,22 @@ nad alfabetem $\Sigma=\{0,1\}$. Narysuj diagram przejść. Dla zaprojektowanej m
  Rozwiązanie.
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_2\}).\]
+
+\vspace{20pt}
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=4cm,very thick,auto]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state,accepting](q2)[below of=q0,yshift=2cm]{$q_2$};
+
+\path(q0)edge[bend left]node[text 						width=1cm,align=center]{$1/1\rightarrow$\\$0/0\rightarrow$}(q1)
+(q0)edge node[left]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q2)
+(q1)edge[bend left]node[below,text 						width=1cm,align=center]{$1/1\rightarrow$\\$0/0\rightarrow$}(q0);
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
