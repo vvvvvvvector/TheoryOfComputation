@@ -1,0 +1,10 @@
+# Ignore Everything
+*
+
+# But not .tex and .pdf
+!*.tex
+!*.pdf
+# OR
+!*/
+!.gitignore
+!README.md
