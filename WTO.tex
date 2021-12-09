@@ -377,6 +377,27 @@ Jeżeli można, to narysuj diagram przejść i dla zaprojektowanej maszyny wykon
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2,q_3,q_4\},\{a,b\},\{a,b,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_4\}).\]
 
+\begin{center}
+\begin{tikzpicture}[->,node distance=3cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[right of=q2]{$q_3$};
+\node[state,accepting](q4)[right of=q3]{$q_4$};
+
+\path(q0)edge node[above]{$a/a\rightarrow$}(q1)
+	(q1)edge[loop above] node[above]{$a/a\rightarrow$}()
+	(q2)edge[bend left] node[below]{$a/a\rightarrow$}(q1)
+	(q2)edge node[above]{$b/b\rightarrow$}(q3)
+	(q3)edge node[above]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q4)
+	(q3)edge[bend right=1.4cm] node[above]{$a/a\rightarrow$}(q1)
+	(q1)edge node[above]{$b/b\rightarrow$}(q2)
+	(q3)edge[loop below] node[below]{$b/b\rightarrow$}();
+
+\end{tikzpicture}
+\end{center}
+
 \newpage
 
 \noindent\textbf{Zad 1.47.} Wypisz cztery przykładowe łańcuchy opisywane przez wyrażenie \textbf{10+(0+11)$\textbf{0}^*$1}. Czy można skonstruować (deterministyczną) maszynę Turinga, która akceptuje język
