@@ -3,7 +3,7 @@
 \usepackage{tikz}
 \usetikzlibrary{automata}
 
-\usepackage[a4paper,width=135mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 
 \usepackage{amsmath}
 
@@ -86,7 +86,49 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia, w
 
  Rozwiązanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0, ... ,q_{11}\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_{11}\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0, ... ,q_{11}\},\{1,0\},\{1,0,r,X,Y,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_{11}\}).\]
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=3cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[right of=q2]{$q_3$};
+\node[state](q4)[right of=q3]{$q_4$};
+\node[state](q5)[below of=q4]{$q_5$};
+\node[state](q6)[below of=q5]{$q_6$};
+\node[state](q7)[below of=q6]{$q_7$};
+\node[state](q8)[below of=q2]{$q_8$};
+\node[state](q9)[above of=q2]{$q_9$};
+\node[state](q10)[right of=q9]{$q_{10}$};
+\node[state,accepting](q11)[right of=q10]{$q_{11}$};
+
+\path(q0)edge node[above]{$0/0\rightarrow$}(q1)
+	(q0)edge[loop above] node[above]{$1/1\rightarrow$}()
+	(q1)edge node[above]{$\bigtriangledown/r\leftarrow$}(q2)
+	(q1)edge[loop above] node[above]{$1/1\rightarrow$}()
+	(q2)edge node[above]{$1/X\leftarrow$}(q3)
+	(q2)edge node[left]{$0/0\leftarrow$}(q9)
+	(q9)edge node[above]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q10)
+	(q10)edge node[above]{$r/\bigtriangledown\rightarrow$}(q11)
+	(q3)edge node[above]{$0/0\leftarrow$}(q4)
+	(q3)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q4)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q4)edge node[text 						width=1cm,left,xshift=-0.5cm]{$Y/1\rightarrow$\\$\bigtriangledown/\bigtriangledown\rightarrow$}(q5)
+	(q5)edge node[right]{$1/Y\rightarrow$}(q6)
+	(q5)edge node[above]{$0/0\rightarrow$}(q8)
+	(q8)edge node[left]{$X/X\leftarrow$}(q2)
+	(q6)edge node[right]{$\bigtriangledown/1\leftarrow$}(q7)
+	(q7)edge[bend right=1.9cm]node[right]{$Y/Y-$}(q4)
+	(q6)edge[loop left] node[text 						width=1cm,left,xshift=-0.3cm]{$r/r\rightarrow$\\$X/X\rightarrow$\\$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q7)edge[loop left] node[text 						width=1cm,left,xshift=-0.3cm]{$r/r\leftarrow$\\$X/X\leftarrow$\\$0/0\leftarrow$\\$1/1\leftarrow$}()
+	(q8)edge[loop left] node[left]{$1/1\rightarrow$}()
+	(q9)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q10)edge[loop above] node[text 						width=1cm,align=center]{$X/\bigtriangledown\rightarrow$\\$0/\bigtriangledown\rightarrow$\\$1/\bigtriangledown\rightarrow$}();
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
@@ -463,81 +505,13 @@ Jeżeli można, to narysuj diagram przejść i dla zaprojektowanej maszyny wy-ko
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_8\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_8\}).\]
 
-\newpage
+\begin{center}
+\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
 
-\begin{tikzpicture}
-
-\tikzstyle{vertex}=[circle,fill=black!10]
-\tikzstyle{selected vertex}=[vertex,fill=red!50]
-\tikzstyle{edge}=[->,very thick]
-
-\node[vertex](v1)at(0,0){$q_0$};
-\node[selected vertex](v2)at(3,0){$q_1$}; % 3cm
-\node[vertex](v3)at(0,-2){$q_2$};
-
-\draw[edge](v1)--(v2);
-\draw[edge](v1)--(v3);
-\draw[edge](v2)--(v3);
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
 
 \end{tikzpicture}
-
-\vspace{40pt}
-
-\begin{tikzpicture}[->,node distance=3cm,auto]
-
-\tikzstyle{vertex}=[circle,fill=black!10]
-\tikzstyle{edge}=[->,very thick]
-
-\node[state,
-	vertex,
-	initial,
- 	initial text=
- 	](A){$q_0$};
- 	
-\node[state,vertex](B)[right of=A]{$q_1$};
-
-\node[state,vertex,accepting](C)[right of=B]{$q_2$};
-
-\path[edge](A)edge[loop above]node{1/1}(A)
-	edge node{a/a}(B)
-	(B)edge[loop above]node{0/0}(B)
-	edge node{b/b}(C)
-	(C)edge[loop above]node{c/c}(C);
-
-\end{tikzpicture}
-
-\vspace{40pt}
-
-\begin{tikzpicture}[->,node distance=3cm,auto]
-
-\node[initial,state](A){$q_0$};
-\node[state](B)[right of=A]{$q_1$};
-
-\path(A)edge[loop above]node{$1/1\rightarrow$}(A)
-	edge[bend left]node{$0/0\rightarrow$}(B)
-	(B)edge[bend left]node{$a/b\leftarrow$}(A);
-
-\end{tikzpicture}
-
-\vspace{40pt}
-
-\begin{tikzpicture}[->,node distance=3cm,auto]
-
-\node[initial,state](A){$q_0$};
-\node[state](B)[right of=A]{$q_1$};
-\node[state](C)[below of=A]{$q_2$};
-\node[state](D)[below of=B]{$q_3$};
-\node[state,accepting](E)[right of=D]{$q_4$};
-
-\path(A)edge[bend left]node{$1/1\rightarrow$}(B)
-	edge(B)
-	(B)edge[bend left](A)
-	edge(D)
-	(C)edge(A)
-	edge[loop left](C)
-	(D)edge(C)
-	edge(E);
-
-\end{tikzpicture}
+\end{center}
 
 \end{document}
