@@ -700,13 +700,33 @@ Jeżeli można, to narysuj diagram przejść i dla zaprojektowanej maszyny wy-ko
 
  Rozwiązanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_8\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_8\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_7\},\{1,0\},\{1,0,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_7\}).\]
 
 \begin{center}
-\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
+\begin{tikzpicture}[->,node distance=5cm,auto,very thick]
 
 \node[initial,state](q0){$q_0$};
 \node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[below of=q0,yshift=-3cm]{$q_2$};
+\node[state](q3)[below of=q1,yshift=-3cm]{$q_3$};
+\node[state](q4)[below right of=q0,xshift=-1cm,yshift=2cm]{$q_4$};
+\node[state](q5)[below right of=q2,xshift=-1cm,yshift=1.25cm]{$q_5$};
+\node[state,accepting](q7)[below of=q4, yshift=3cm]{$q_7$};
+\node[state](q6)[below of=q7, yshift=3cm]{$q_6$};
+
+\path(q0)edge node[above]{$1/1\rightarrow$}(q1)
+	(q1)edge node[right,xshift=-0.3cm,yshift=-0.4cm]{$0/0\rightarrow$}(q4)
+	(q4)edge node[right]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q7)
+	(q6)edge node[right]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q7)
+	(q0)edge node[left]{$0/0\rightarrow$}(q2)
+	(q1)edge node[right]{$1/1\rightarrow$}(q3)
+	(q3)edge node[right, yshift=-0.3cm]{$0/0\rightarrow$}(q5)
+	(q2)edge node[left, yshift=-0.3cm,xshift=0.2cm]{$0/0\rightarrow$}(q5)
+	(q3)edge node[above,xshift=0.45cm]{$1/1\rightarrow$}(q6)
+	(q2)edge node[above,xshift=-0.35cm]{$1/1\rightarrow$}(q6)
+	(q5)edge[loop below] node[below]{$0/0\rightarrow$}()
+	(q5)edge node[right]{$1/1\rightarrow$}(q6);
+
 
 \end{tikzpicture}
 \end{center}
