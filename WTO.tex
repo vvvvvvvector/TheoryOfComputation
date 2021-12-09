@@ -98,8 +98,6 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_9\},\{1\},\{1,X,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_9\}).\]
 
-\vspace{15pt}
-
 \begin{center}
 \begin{tikzpicture}[->,node distance=4cm,auto,very thick]
 
@@ -156,7 +154,28 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 
  Rozwiązanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2,q_3,q_4\},\{1\},\{1,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_4\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2,q_3,q_4\},\{1\},\{1,X,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_4\}).\]
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[right of=q2]{$q_3$};
+\node[state,accepting](q4)[below of=q2]{$q_4$};
+
+\path(q0)edge node[above]{$1/1\rightarrow$}(q1)
+	 (q1)edge node[above]{$1/1\rightarrow$}(q2)
+	 (q1)edge node[above,xshift=-0.8cm,yshift=-0.6cm]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q4)
+	 (q2)edge node[above]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q3)
+	 (q2)edge[loop above] node[above]{$1/X\rightarrow$}()
+	 (q3)edge[loop above] node[above]{$X/\bigtriangledown\leftarrow$}()
+	 (q3)edge node[below,xshift=0.5cm]{$1/1-$}(q4)
+	 ;
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
