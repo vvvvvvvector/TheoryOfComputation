@@ -368,6 +368,46 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_{10}\},\{a,b\},\{a,b,s,X,Y,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_{10}\}).\]
 
+\begin{center}
+\begin{tikzpicture}[->,node distance=3cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[above of=q2]{$q_3$};
+\node[state](q5)[above of=q3]{$q_5$};
+\node[state](q6)[left of=q5]{$q_6$};
+\node[state](q4)[below of=q2]{$q_4$};
+\node[state](q7)[below of=q4]{$q_7$};
+\node[state](q8)[left of=q7]{$q_8$};
+\node[state](q9)[right of=q2]{$q_9$};
+\node[state,accepting](q10)[right of=q9]{$q_{10}$};
+
+\path(q0)edge node[below]{$\bigtriangledown/s\leftarrow$}(q1)
+	(q0)edge[loop above] node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$b/b\rightarrow$}()
+	(q1)edge node[text 						width=1cm,below,align=center]{$X/a\rightarrow$\\$Y/b\rightarrow$\\$\bigtriangledown/\bigtriangledown\rightarrow$}(q2)
+	(q2)edge node[above]{$s/s\leftarrow$}(q9)
+	(q2)edge node[right]{$a/X\rightarrow$}(q3)
+	(q3)edge node[right]{$s/s\rightarrow$}(q5)
+	(q5)edge node[above]{$\bigtriangledown/a\leftarrow$}(q6)
+	(q5)edge[loop right] node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$b/b\rightarrow$}()
+	(q3)edge[loop right] node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$b/b\rightarrow$}()
+	(q4)edge[loop right] node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$b/b\rightarrow$}()
+	(q7)edge[loop right] node[text 						width=1cm,align=center]{$a/a\rightarrow$\\$b/b\rightarrow$}()
+	(q6)edge[loop above] node[text 						width=1cm,align=center]{$a/a\leftarrow$\\$b/b\leftarrow$}()
+	(q8)edge[loop below] node[text 						width=1cm,align=center]{$a/a\leftarrow$\\$b/b\leftarrow$}()
+	(q6)edge[bend right=1.3cm] node[left]{$s/s\leftarrow$}(q1)
+	(q2)edge node[right]{$b/Y\rightarrow$}(q4)
+	(q4)edge node[right]{$s/s\rightarrow$}(q7)
+	(q7)edge node[below]{$\bigtriangledown/b\leftarrow$}(q8)
+	(q8)edge[bend left=1.3cm] node[left]{$s/s\leftarrow$}(q1)
+	(q1)edge[loop above] node[text 						width=1cm,align=center]{$a/a\leftarrow$\\$b/b\leftarrow$}()
+	(q9)edge[loop above] node[text 						width=1cm,align=center]{$a/a\leftarrow$\\$b/b\leftarrow$}()
+	(q9)edge node[above]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q10);
+
+\end{tikzpicture}
+\end{center}
+
 \newpage
 
 \noindent\textbf{Zad 1.22.} Zaprojektuj  maszynę  Turinga  nad  alfabetem $\Sigma=\{a,b\}$,  która akceptuje język
