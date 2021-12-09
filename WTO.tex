@@ -523,6 +523,43 @@ gdzie $\textit{w}\in\{0,1\}^+$ oraz ${\textit{w}^\textit{R}}$ oznacza \textbf{od
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_9\},\{1,0\},\{1,0,s,X,Y,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_9\}).\]
 
+\begin{center}
+\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q4)[right of=q2]{$q_4$};
+\node[state](q3)[below of=q1]{$q_3$};
+\node[state](q6)[below of=q3]{$q_6$};
+\node[state](q7)[right of=q3]{$q_7$};
+\node[state](q5)[right of=q6,xshift=4cm]{$q_5$};
+\node[state](q8)[above of=q1]{$q_8$};
+\node[state,accepting](q9)[left of=q8]{$q_9$};
+
+\path(q0)edge node[above]{$\bigtriangledown/s\leftarrow$}(q1)
+	(q0)edge[loop above] node[text 						width=1cm,align=center]{$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q1)edge node[left]{$0/Y\rightarrow$}(q3)
+	(q1)edge node[above]{$1/X\rightarrow$}(q2)
+	(q2)edge node[above]{$s/s\rightarrow$}(q4)
+	(q4)edge node[right]{$\bigtriangledown/1\leftarrow$}(q5)
+	(q2)edge[loop above] node[text 						width=1cm,align=center]{$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q4)edge[loop above] node[text 						width=1cm,align=center]{$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q3)edge[loop left] node[text 						width=1cm,align=center]{$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q6)edge[loop left] node[text 						width=1cm,align=center]{$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q3)edge node[left]{$s/s\rightarrow$}(q6)
+	(q6)edge node[above]{$\bigtriangledown/0\leftarrow$}(q5)
+	(q5)edge node[above, xshift=0.7cm]{$s/s\leftarrow$}(q7)
+	(q7)edge node[text 						width=1cm,above,xshift=0.4cm,align=center]{$X/1\leftarrow$\\$Y/0\leftarrow$}(q1)
+	(q7)edge[loop above] node[text 						width=1cm,align=center]{$0/0\leftarrow$\\$1/1\leftarrow$}()
+	(q5)edge[loop right] node[text 						width=1cm,align=center]{$0/0\leftarrow$\\$1/1\leftarrow$}()
+	(q1)edge node[right]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q8)
+	(q8)edge[loop above] node[text 						width=1cm,align=center]{$0/\bigtriangledown\leftarrow$\\$1/\bigtriangledown\leftarrow$}()
+	(q8)edge node[above]{$s/\bigtriangledown\rightarrow$}(q9);
+
+\end{tikzpicture}
+\end{center}
+
 \newpage
 
 \noindent\textbf{Zad 1.30.} Zaprojektuj maszynę Turinga, która akceptuje język
@@ -532,6 +569,37 @@ nad alfabetem $\Sigma=\{x,y\}$. Narysuj diagram przejść. Dla zaprojektowanej m
  Rozwiązanie.
  
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_8\},\{x,y\},\{x,y,A,B,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_8\}).\]
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=3.5cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[right of=q2]{$q_3$};
+\node[state](q4)[right of=q3]{$q_4$};
+\node[state](q5)[below of=q4]{$q_5$};
+\node[state](q6)[left of=q5]{$q_6$};
+\node[state](q7)[above of=q3]{$q_7$};
+\node[state,accepting](q8)[above right of=q7]{$q_8$};
+
+\path(q0)edge node[below]{$x/A\rightarrow$}(q1)
+	(q1)edge node[below]{$y/B\leftarrow$}(q2)
+	(q2)edge node[below]{$A/x\rightarrow$}(q3)
+	(q3)edge node[below]{$x/A\rightarrow$}(q4)
+	(q4)edge node[right]{$B/y\rightarrow$}(q5)
+	(q5)edge node[below]{$y/B\leftarrow$}(q6)
+	(q6)edge node[left]{$A/x\rightarrow$}(q3)
+	(q3)edge[bend left=1.8cm] node{$B/y\rightarrow$}(q7)
+	(q7)edge node[above, xshift=-0.5cm]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q8)
+	(q1)edge[loop above] node[above]{$x/x\rightarrow$}()
+	(q2)edge[loop above] node[above]{$x/x\rightarrow$}()
+	(q3)edge[loop above] node[above]{$y/y\rightarrow$}()
+	(q4)edge[loop above] node[text 						width=1cm,align=center]{$y/y\rightarrow$\\$x/x\rightarrow$}()
+	(q6)edge[loop left] node[text 						width=1cm,align=center]{$y/y\leftarrow$\\$x/x\leftarrow$}();
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
