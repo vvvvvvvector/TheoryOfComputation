@@ -354,7 +354,67 @@ dla liczby naturalnej \textit{n} w reprezentacji unarnej. Narysuj diagram przejÅ
 
  RozwiÄ…zanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_{17}\},\{1,0\},\{1,0,X,Y,r,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_{17}\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_{17}\},\{1,0\},\{1,0,X,Y,r,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_{11}\}).\]
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=3cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q12)[below of=q0]{$q_{12}$};
+\node[state](q13)[below of=q12]{$q_{13}$};
+\node[state](q14)[below of=q13]{$q_{14}$};
+\node[state](q15)[below of=q14]{$q_{15}$};
+\node[state](q16)[right of=q14,xshift=1.3cm]{$q_{16}$};
+\node[state](q17)[above of=q16]{$q_{17}$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[right of=q1]{$q_2$};
+\node[state](q3)[right of=q2]{$q_3$};
+\node[state](q4)[right of=q3]{$q_4$};
+\node[state](q5)[below of=q4]{$q_5$};
+\node[state](q6)[below of=q5]{$q_6$};
+\node[state](q7)[below of=q6]{$q_7$};
+\node[state](q8)[below of=q2]{$q_8$};
+\node[state](q9)[above of=q2]{$q_9$};
+\node[state](q10)[right of=q9]{$q_{10}$};
+\node[state,accepting](q11)[right of=q10]{$q_{11}$};
+
+\path(q0)edge[loop above] node[above]{$1/1\rightarrow$}()
+	(q1)edge node[above]{$\bigtriangledown/r\leftarrow$}(q2)
+	(q1)edge[loop above] node[above]{$1/1\rightarrow$}()
+	(q2)edge node[above]{$1/X\leftarrow$}(q3)
+	(q2)edge node[left]{$0/0\leftarrow$}(q9)
+	(q9)edge node[above]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q10)
+	(q10)edge node[above]{$r/\bigtriangledown\rightarrow$}(q11)
+	(q3)edge node[above]{$0/0\leftarrow$}(q4)
+	(q3)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q4)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q4)edge node[text 						width=1cm,left,xshift=-0.5cm]{$Y/1\rightarrow$\\$\bigtriangledown/\bigtriangledown\rightarrow$}(q5)
+	(q5)edge node[left]{$1/Y\rightarrow$}(q6)
+	(q5)edge node[above]{$0/0\rightarrow$}(q8)
+	(q8)edge node[left]{$X/X\leftarrow$}(q2)
+	(q6)edge node[left]{$\bigtriangledown/1\leftarrow$}(q7)
+	(q7)edge[bend right=0.8cm]node[right]{$Y/Y-$}(q4)
+	(q6)edge[loop left] node[text 						width=1cm,left,xshift=-0.3cm]{$r/r\rightarrow$\\$X/X\rightarrow$\\$0/0\rightarrow$\\$1/1\rightarrow$}()
+	(q7)edge[loop left] node[text 						width=1cm,left,xshift=-0.3cm]{$r/r\leftarrow$\\$X/X\leftarrow$\\$0/0\leftarrow$\\$1/1\leftarrow$}()
+	(q8)edge[loop below] node[below]{$1/1\rightarrow$}()
+	(q9)edge[loop above] node[above]{$1/1\leftarrow$}()
+	(q10)edge[loop above] node[text 						width=1cm,align=center]{$X/\bigtriangledown\rightarrow$\\$0/\bigtriangledown\rightarrow$\\$1/\bigtriangledown\rightarrow$}()
+	(q0)edge node[right]{$\bigtriangledown/0\leftarrow$}(q12)
+	(q12)edge node[text 						width=1cm,align=center]{$\bigtriangledown/\bigtriangledown\rightarrow$\\$X/1\rightarrow$}(q13)
+	(q12)edge[loop left] node[text 						width=1cm,align=center]{$0/0\leftarrow$\\$1/1\leftarrow$}()
+	(q13)edge node[right]{$1/X\rightarrow$}(q14)
+	(q14)edge node[right]{$0/0\rightarrow$}(q15)
+	(q14)edge[loop right] node[right]{$1/1\rightarrow$}()
+	(q15)edge[loop right] node[right]{$1/1\rightarrow$}()
+	(q16)edge[loop right] node[right]{$1/1\leftarrow$}()
+	(q17)edge[loop right] node[right]{$1/1\rightarrow$}()
+	(q15)edge[bend left=0.8cm] node[left]{$\bigtriangledown/1\leftarrow$}(q12)
+	(q13)edge node[above,xshift=0.5cm]{$0/0\leftarrow$}(q16)
+	(q16)edge node[right]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q17)
+	(q17)edge node[right]{$0/0\rightarrow$}(q1);
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
