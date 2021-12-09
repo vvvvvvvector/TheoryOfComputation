@@ -96,7 +96,42 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 
  Rozwiązanie.
  
-\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_9\},\{1\},\{1,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_9\}).\]
+\[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,...,q_9\},\{1\},\{1,X,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_9\}).\]
+
+\vspace{15pt}
+
+\begin{center}
+\begin{tikzpicture}[->,node distance=4cm,auto,very thick]
+
+\node[initial,state](q0){$q_0$};
+\node[state](q1)[right of=q0]{$q_1$};
+\node[state](q2)[below of=q0]{$q_2$};
+\node[state](q3)[below of=q1]{$q_3$};
+\node[state](q4)[below right of=q2,xshift=-0.8cm]{$q_4$};
+\node[state](q5)[right of=q4]{$q_5$};
+\node[state](q6)[right of=q5]{$q_6$};
+\node[state](q7)[right of=q6]{$q_7$};
+\node[state](q8)[below of=q4]{$q_8$};
+\node[state,accepting](q9)[below right of=q8]{$q_9$};
+
+\path(q0)edge[bend left] node[above]{$1/1\rightarrow$}(q1)
+	 (q1)edge[bend left] node[below]{$1/1\rightarrow$}(q0)
+	 (q1)edge node[right]{$\bigtriangledown/1-$}(q3)
+	 (q0)edge node[left]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q2)
+	 (q3)edge node[right,xshift=0.15cm]{$1/1-$}(q4)
+	 (q2)edge node[left,xshift=-0.15cm]{$1/1-$}(q4)
+	 (q4)edge node[above]{$1/X\leftarrow$}(q5)
+	 (q5)edge[loop above] node[above]{$1/1\leftarrow$}()
+	 (q5)edge node[above]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q6)
+	 (q6)edge node[above]{$1/\bigtriangledown\rightarrow$}(q7)
+	 (q7)edge[loop above] node[above]{$1/1\rightarrow$}()
+	 (q7)edge[bend left] node[below]{$X/X\leftarrow$}(q4)
+	 (q4)edge node[left]{$\bigtriangledown/\bigtriangledown\rightarrow$}(q8)
+	 (q8)edge node[above,xshift=-0.8cm,yshift=-0.5cm]{$\bigtriangledown/\bigtriangledown\leftarrow$}(q9)
+	 (q8)edge[loop left] node[left]{$X/1\rightarrow$}();
+
+\end{tikzpicture}
+\end{center}
 
 \newpage
 
