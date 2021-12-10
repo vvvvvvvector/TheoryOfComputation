@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
-\usepackage{tikz}
-\usetikzlibrary{automata}
+\usepackage{tikz, parallel}
+\usetikzlibrary{automata,positioning}
 
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 
@@ -80,6 +80,58 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 \end{center}
 
 \newpage
+
+Obliczenia
+
+\vspace{15pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+        
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3,fill=green!20] {$1$};
+\node (b5) [right=of b4]{$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+	  
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+        
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2,fill=green!20] {$1$};
+\node (b4) [right=of b3] {$0$};
+\node (b5) [right=of b4]{$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+  
+\end{tikzpicture}}
+
+\ParallelRText{
+	$K_0\qquad11q_01\vdash$
+	\par
+	$K_1\qquad1q_010\vdash$
+}
+
+\end{Parallel}
+
+\newpage
+
 \noindent\textbf{Zad 1.2.} Zaprojektuj maszynę Turinga, która oblicza funkcję mnożenia \textit{f} dla liczb naturalnych \textit{m} i \textit{n} w reprezentacji unarnej, czyli
 \[f(m,n)=m \cdot n\]
 Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia, w tym pomnóż 3·2 lub 2·3 (wykonaj rysunki taśmy i zapisz konfiguracje).
