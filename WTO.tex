@@ -5242,6 +5242,286 @@ gdzie $\textit{w}\in\{0,1\}^+$ oraz ${\textit{w}^\textit{R}}$ oznacza \textbf{od
 
 \newpage
 
+Obliczenia \textit{w} = 01
+
+\vspace{5pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$0$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2,fill=green!20] {$1$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3,fill=green!20] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2,fill=green!20] {$1$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2] {$X$};
+\node (b4) [right=of b3,fill=green!20] {$s$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2] {$X$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4,fill=green!20] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}01\vdash$
+	\par
+	$K_1\qquad0{q_0}1\vdash$
+	\par
+	$K_2\qquad01{q_0}\bigtriangledown\vdash$
+	\par
+	$K_3\qquad0{q_1}1s\vdash$
+	\par
+	$K_4\qquad0{X}{q_2}s\vdash$
+	\par
+	$K_5\qquad0{Xs}{q_4}\bigtriangledown\vdash$
+	\par
+}
+
+\end{Parallel}
+
+\vspace{5pt}
+
+------------------------\vdots------------------------
+
+\vspace{10pt}
+
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$Y$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) [fill=green!20] {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$0$};
+\node (b3) [right=of b2] {$1$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$\bigtriangledown$};
+\node (b3) [right=of b2,fill=green!20] {$1$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$\bigtriangledown$};
+\node (b3) [right=of b2] {$\bigtriangledown$};
+\node (b4) [right=of b3,fill=green!20] {$s$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$\bigtriangledown$};
+\node (b3) [right=of b2] {$\bigtriangledown$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4,fill=green!20] {$1$};
+\node (b6) [right=of b5] {$0$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_{16}\qquad{q_7}{Y}1s10\vdash$
+	\par
+	$K_{17}\qquad{q_1}\bigtriangledown01s10\vdash$
+	\par
+	$K_{18}\qquad{q_8}01s10\vdash$
+	\par
+	$K_{19}\qquad{q_8}1s10\vdash$
+	\par
+	$K_{20}\qquad{q_8}s10\vdash$
+	\par
+	$K_{21}\qquad{q_9}10$
+}
+
+\end{Parallel}
+
+\vspace{5pt}
+
+Obliczenia \textit{w} = 100
+
+\vspace{5pt}
+
+\newpage
+
 \noindent\textbf{Zad 1.30.} Zaprojektuj maszynę Turinga, która akceptuje język
 \[L=\{\text{$x^ny^n$: \textit{n} $\geq$ 1}\}\]
 nad alfabetem $\Sigma=\{x,y\}$. Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (wykonaj rysunki taśmy i zapisz konfiguracje).
