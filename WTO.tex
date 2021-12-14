@@ -3382,6 +3382,512 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 
 \newpage
 
+Obliczenia \textit{w} = a
+
+\vspace{5pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$\bigtriangledown$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}	
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$\bigtriangledown$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}	
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) [fill=green!20]{$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$X$};
+\node (b3) [right=of b2,fill=green!20] {$s$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$X$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3,fill=green!20] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$X$};
+\node (b3) [right=of b2,fill=green!20] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$X$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) [fill=green!20]{$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$s$};
+\node (b4) [right=of b3] {$a$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b5.north east) -- ++(1cm,0)
+	(b5.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+	
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}a\vdash$
+	\par
+	$K_1\qquad{a}{q_0}\bigtriangledown\vdash$
+	\par
+	$K_2\qquad{q_1}{a}s\vdash$
+	\par
+	$K_3\qquad{q_1}\bigtriangledown{a}s\vdash$
+	\par
+	$K_4\qquad{q_2}{a}s\vdash$
+	\par
+	$K_5\qquad{X}{q_3}s\vdash$
+	\par
+	$K_6\qquad{Xs}{q_5}\bigtriangledown\vdash$
+	\par
+	$K_7\qquad{X}{q_6}sa\vdash$
+	\par
+	$K_8\qquad{q_1}{X}sa\vdash$
+	\par
+	$K_9\qquad{a}{q_2}sa\vdash$
+	\par
+	$K_{10}\qquad{q_9}{a}sa\vdash$
+	\par
+	$K_{11}\qquad{q_9}\bigtriangledown{a}sa\vdash$
+	\par
+	$K_{12}\qquad{q_{10}}{a}sa$
+	\par
+}
+
+\end{Parallel}
+
+\vspace{5pt}
+
+Obliczenia \textit{w} = ab
+
+\vspace{5pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$b$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3,fill=green!20] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}ab\vdash$
+	\par
+	$K_1\qquad{a}{q_0}b\vdash$
+	\par
+	$K_2\qquad{ab}{q_0}\bigtriangledown\vdash$
+	\par
+	$K_3\qquad{a}{q_1}bs\vdash$
+	\par
+	$K_4\qquad{q_1}{a}bs\vdash$
+	\par
+}
+
+\end{Parallel}
+
+\vspace{5pt}
+
+------------------------\vdots------------------------
+
+\vspace{10pt}
+
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$Y$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3,fill=green!20] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) [fill=green!20]{$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$s$};
+\node (b5) [right=of b4] {$a$};
+\node (b6) [right=of b5] {$b$};
+\node (b7) [right=of b6] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b7.north east) -- ++(1cm,0)
+	(b7.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_{19}\qquad{a}{q_1}Ysab\vdash$
+	\par
+	$K_{20}\qquad{ab}{q_2}sab\vdash$
+	\par
+	$K_{21}\qquad{a}{q_9}bsab\vdash$
+	\par
+	$K_{22}\qquad{q_9}{a}bsab\vdash$
+	\par
+	$K_{23}\qquad{q_9}\bigtriangledown{a}bsab\vdash$
+	\par
+	$K_{24}\qquad{q_{10}}absab$
+	\par
+}
+
+\end{Parallel}
+
+\newpage
+
 \noindent\textbf{Zad 1.22.} Zaprojektuj  maszynę  Turinga  nad  alfabetem $\Sigma=\{a,b\}$,  która akceptuje język
 \[L=\{\text{\textit{w}: \textit{w} zawiera  równą liczbę symboli \textit{a} i \textit{b}}\}.\]
 Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (wykonaj rysunki taśmy i zapisz konfiguracje).
@@ -3627,7 +4133,7 @@ Obliczenia \textit{w} = ab
 
 Obliczenia \textit{w} = abab
 
-\vspace{10pt}
+\vspace{5pt}
 
 \begin{Parallel}{0.48\textwidth}{0.5\textwidth}
 
@@ -3756,7 +4262,7 @@ Obliczenia \textit{w} = abab
 
 \vspace{5pt}
 
-------------------13 kroków------------------
+------------------------\vdots------------------------
 
 \vspace{10pt}
 
