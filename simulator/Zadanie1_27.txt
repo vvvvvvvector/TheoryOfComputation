@@ -1,0 +1,34 @@
+;Zadanie 1.27
+
+q0 1 1 r q0 
+q0 0 0 r q0 
+q0 _ s l q1
+
+q5 1 1 l q5
+q5 0 0 l q5
+q5 s s l q7
+q7 1 1 l q7
+q7 0 0 l q7
+q7 X 1 l q1
+q7 Y 0 l q1
+
+q1 1 X r q2
+q2 1 1 r q2
+q2 0 0 r q2
+q2 s s r q4
+q4 1 1 r q4
+q4 0 0 r q4
+q4 _ 1 l q5
+
+q1 0 Y r q3
+q3 1 1 r q3
+q3 0 0 r q3
+q3 s s r q6
+q6 1 1 r q6
+q6 0 0 r q6
+q6 _ 0 l q5
+
+q1 _ _ r q8 
+q8 1 _ r q8
+q8 0 _ r q8 
+q8 s _ r halt

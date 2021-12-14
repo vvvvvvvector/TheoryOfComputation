@@ -1,0 +1,2 @@
+1. symulator MT - http://morphett.info/turing/
+2. advanced options -> initial state -> wszędzie będzie q0 

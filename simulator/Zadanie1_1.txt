@@ -1,0 +1,18 @@
+;Zadanie 1.1 (alfabet bez zera)
+
+q0 1 1 r q0
+q0 0 0 r q0
+q0 _ _ l q1
+q1 1 _ l q2
+q2 1 1 l q2
+q2 0 0 l q2
+q2 _ _ r q3
+q3 1 _ r q0
+
+q3 0 _ r q6
+q6 1 _ r q6
+q6 _ _ * halt
+
+q1 0 0 r q4
+q4 _ _ l q5
+q5 0 _ l halt

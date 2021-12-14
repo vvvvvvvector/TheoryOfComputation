@@ -1,0 +1,30 @@
+;Zadanie 1.22
+
+q0 a X r q1
+q0 b Y r q2
+
+q1 a a r q1
+q1 X X r q1
+q1 Y Y r q1
+q1 b Y l q3
+
+q2 b b r q2
+q2 X X r q2
+q2 Y Y r q2
+q2 a X l q3
+
+q3 a a l q3
+q3 b b l q3
+q3 X X l q3
+q3 Y Y l q3
+
+q3 _ _ r q4
+q4 X X r q4
+q4 Y Y r q4
+q4 a a * q0
+q4 b b * q0
+
+q4 _ _ l q5
+q5 X a l q5
+q5 Y b l q5
+q5 _ _ r halt

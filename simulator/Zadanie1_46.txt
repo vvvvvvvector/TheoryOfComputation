@@ -1,0 +1,10 @@
+;zadanie 1.46
+
+q0 a a r q1
+q1 a a r q1
+q1 b b r q2
+q2 a a r q1 
+q2 b b r q3
+q3 a a r q1
+q3 b b r q3
+q3 _ _ l halt

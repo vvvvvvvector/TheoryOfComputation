@@ -1,0 +1,37 @@
+;Zadanie 1.19
+
+q0 a a r q0 ; separator
+q0 b b r q0
+q0 _ s l q1
+q1 a a l q1
+q1 b b l q1
+q1 X a r q2
+q1 Y b r q2
+q1 _ _ r q2
+
+q2 a X r q3 ; for a
+q3 a a r q3
+q3 b b r q3
+q3 s s r q5
+q5 a a r q5
+q5 b b r q5
+q5 _ a l q6
+q6 a a l q6
+q6 b b l q6
+q6 s s l q1
+
+q2 b Y r q4 ; for b
+q4 a a r q4
+q4 b b r q4
+q4 s s r q7
+q7 a a r q7
+q7 b b r q7
+q7 _ b l q8
+q8 a a l q8
+q8 b b l q8
+q8 s s l q1
+
+q2 s s l q9
+q9 a a l q9
+q9 b b l q9
+q9 _ _ r halt

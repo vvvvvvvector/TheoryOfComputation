@@ -1,0 +1,14 @@
+;Zadanie 1.47
+
+q0 1 1 r q1 
+q1 0 0 r q4
+q4 _ _ l halt
+q0 0 0 r q2
+q2 0 0 r q5
+q1 1 1 r q3
+q3 0 0 r q5
+q3 1 1 r q6
+q2 1 1 r q6
+q6 _ _ l halt
+q5 0 0 r q5
+q5 1 1 r q6

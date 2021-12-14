@@ -1,0 +1,22 @@
+;zadanie 1.30
+
+q0 x A r q1
+q1 x x r q1
+
+q1 y B l q2
+q2 x x l q2
+q2 A x r q3
+
+q3 x A r q4
+q3 y y r q3
+q3 B y r q7
+q7 _ _ l halt
+
+q4 x x r q4
+q4 y y r q4
+q4 B y r q5
+
+q5 y B l q6
+q6 y y l q6
+q6 x x l q6
+q6 A x r q3

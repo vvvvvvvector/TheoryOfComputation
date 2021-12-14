@@ -1,0 +1,55 @@
+;Zadanie 1.13
+
+q0 1 1 r q0 
+q0 _ 0 l q12
+
+q12 1 1 l q12
+q12 0 0 l q12
+q12 _ _ r q13
+q12 X 1 r q13
+
+q13 1 X r q14
+q14 1 1 r q14
+q14 0 0 r q15
+q15 1 1 r q15
+q15 _ 1 l q12 
+
+q13 0 0 l q16
+q16 1 1 l q16
+q16 _ _ r q17
+
+q17 1 1 r q17
+q17 0 0 r q1 
+q1 1 1 r q1
+q1 _ r l q2
+
+q2 1 X l q3
+q3 1 1 l q3
+q3 0 0 l q4
+q4 1 1 l q4 
+q4 _ _ r q5
+q4 Y 1 r q5
+
+q5 1 Y r q6
+q6 1 1 r q6
+q6 0 0 r q6
+q6 X X r q6
+q6 r r r q6
+q6 _ 1 l q7
+q7 X X l q7
+q7 1 1 l q7
+q7 0 0 l q7
+q7 r r l q7
+q7 Y Y * q4
+
+q5 0 0 r q8 
+q8 1 1 r q8
+q8 X X l q2
+
+q2 0 0 l q9
+q9 1 1 l q9
+q9 _ _ r q10
+q10 1 _ r q10
+q10 0 _ r q10
+q10 X _ r q10
+q10 r _ r halt

@@ -1,0 +1,14 @@
+;Zadanie 1.5
+
+q0 1 1 r q0
+q0 _ _ l q1
+q1 1 X l q2 
+q1 _ _ r q5
+q2 1 1 l q2
+q2 _ _ r q3
+q3 X X * q5
+q3 1 _ r q4
+q4 1 1 r q4
+q4 X X l q1
+q5 X 1 r q5
+q5 _ _ l halt
