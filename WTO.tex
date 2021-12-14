@@ -1920,7 +1920,7 @@ Narysuj diagram przejść. Dla zaprojektowanej maszyny wykonaj dwa obliczenia (w
 \end{tikzpicture}
 \end{center}
 
-\newpage
+\vspace{10pt}
 
 Obliczenia n = 0
 
@@ -2143,6 +2143,7 @@ Obliczenia n = 2
 	$K_6\qquad1{q_4}1$
 }
 \end{Parallel}
+
 
 \newpage
 
@@ -2799,6 +2800,246 @@ nad alfabetem $\Sigma=\{0,1\}$. Narysuj diagram przejść. Dla zaprojektowanej m
 \end{tikzpicture}
 \end{center}
 
+\vspace{20pt}
+
+Obliczenia \textit{w} = 1011
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\vspace{5pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$1$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3] {$1$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2,fill=green!20] {$0$};
+\node (b4) [right=of b3] {$1$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3,fill=green!20] {$1$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3] {$1$};
+\node (b5) [right=of b4,fill=green!20] {$1$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3] {$1$};
+\node (b5) [right=of b4] {$1$};
+\node (b6) [right=of b5,fill=green!20] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$1$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3] {$1$};
+\node (b5) [right=of b4,fill=green!20] {$1$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}1011\vdash$
+	\par
+	$K_1\qquad1{q_1}011\vdash$
+	\par
+	$K_2\qquad10{q_0}11\vdash$
+	\par
+	$K_3\qquad101{q_1}1\vdash$
+	\par
+	$K_4\qquad1011{q_0}\bigtriangledown\vdash$
+	\par
+	$K_5\qquad101{q_2}1$
+	\par
+}
+
+\end{Parallel}
+
+\vspace{5pt}
+
+Obliczenia \textit{w} = 00
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+
+\vspace{5pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$0$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2,fill=green!20] {$0$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2] {$0$};
+\node (b4) [right=of b3,fill=green!20] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$0$};
+\node (b3) [right=of b2,fill=green!20] {$0$};
+\node (b4) [right=of b3] {$\bigtriangledown$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}00\vdash$
+	\par
+	$K_1\qquad0{q_1}0\vdash$
+	\par
+	$K_2\qquad00{q_0}\bigtriangledown\vdash$
+	\par
+	$K_3\qquad0{q_2}0$
+}
+
+\end{Parallel}
+
+
 \newpage
 
 \noindent\textbf{Zad 1.25.} Niech $\Sigma=\{a,b\}$. Zaprojektuj maszynę Turinga, która akceptuje język
@@ -2934,6 +3175,12 @@ Jeżeli można, to narysuj diagram przejść i dla zaprojektowanej maszyny wykon
 
  Rozwiązanie.
  
+\begin{enumerate}
+  	\item abb 
+ 	\item aaaabbb
+  	\item ababaaabbbb
+  	\item aaabbaabbabb
+\end{enumerate}
 \[M=(Q,\Gamma,\Sigma,\delta,q_0,\bigtriangledown,F)=(\{q_0,q_1,q_2,q_3,q_4\},\{a,b\},\{a,b,\bigtriangledown\},\delta,q_0,\bigtriangledown,\{q_4\}).\]
 
 \begin{center}
@@ -2956,6 +3203,261 @@ Jeżeli można, to narysuj diagram przejść i dla zaprojektowanej maszyny wykon
 
 \end{tikzpicture}
 \end{center}
+
+Obliczenia \textit{w} = abb
+
+\vspace{5pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$b$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3,fill=green!20] {$b$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4,fill=green!20] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$b$};
+\node (b4) [right=of b3,fill=green!20] {$b$};
+\node (b5) [right=of b4] {$\bigtriangledown$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}abb\vdash$
+	\par
+	$K_1\qquad{a}{q_1}bb\vdash$
+	\par
+	$K_2\qquad{ab}{q_2}b\vdash$
+	\par
+	$K_3\qquad{abb}{q_3}\bigtriangledown\vdash$
+	\par
+	$K_4\qquad{ab}{q_4}b$
+	\par
+}
+
+\end{Parallel}
+
+Obliczenia \textit{w} = aabb
+
+\vspace{5pt}
+
+\begin{Parallel}{0.48\textwidth}{0.5\textwidth}
+
+\ParallelLText{
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1,fill=green!20] {$a$};
+\node (b3) [right=of b2] {$a$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4] {$b$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2,fill=green!20] {$a$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4] {$b$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$a$};
+\node (b4) [right=of b3,fill=green!20] {$b$};
+\node (b5) [right=of b4] {$b$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$a$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4,fill=green!20] {$b$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$a$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4] {$b$};
+\node (b6) [right=of b5,fill=green!20] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+\vspace{35pt}
+
+\begin{tikzpicture}[every node/.style={block},
+        block/.style={minimum height=0.7cm,minimum width=0.7cm,outer sep=0pt,draw,rectangle,node distance=0pt}]
+
+\node (b1) {$\bigtriangledown$};
+\node (b2) [right=of b1] {$a$};
+\node (b3) [right=of b2] {$a$};
+\node (b4) [right=of b3] {$b$};
+\node (b5) [right=of b4,fill=green!20] {$b$};
+\node (b6) [right=of b5] {$\bigtriangledown$};
+
+\draw (b1.north west) -- ++(-1cm,0)
+	(b1.south west) -- ++(-1cm,0)
+	(b6.north east) -- ++(1cm,0)
+	(b6.south east) -- ++(1cm,0);
+
+\end{tikzpicture}
+
+}
+
+\ParallelRText{
+	$K_0\qquad{q_0}aabb\vdash$
+	\par
+	$K_1\qquad{a}{q_1}abb\vdash$
+	\par
+	$K_2\qquad{aa}{q_1}bb\vdash$
+	\par
+	$K_3\qquad{aab}{q_2}b\vdash$
+	\par
+	$K_4\qquad{aabb}{q_3}\vdash$
+	\par
+	$K_5\qquad{aab}{q_4}b$
+	\par
+}
+
+\end{Parallel}
 
 \newpage
 
